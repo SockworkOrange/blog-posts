@@ -14,28 +14,3 @@ For example, if the user entered 1, it will print "> 1"
 
 From these 6 building blocks, any pipeline can be built, here is one for example:  
 stdin-source -> filter(i=>i>0) -> fixed-event-window(2) -> fold-sum -> fixed-event-window(3) -> fold-median -> stdout-sink
-
-An example for an input by the user:
-\> 1  
-\> 2  
-\> -5  
-\> 3  
-\> 4  
-\> 5  
-\> 6  
-7 ← printed by stdout-sink  
-\> 10  
-\> 11  
-\> 12  
-\> 13  
-\> 14  
-\> 15  
-??? ← what would be the value here?  
-
-Your job is to implement the above while thinking of the following:
-
-● No need to think of multithreading or multi-process solutions at this point.  
-● How to design the system so it would be easy to add more building blocks later on.  
-● How do you create the connection between the building blocks (passing values forward)  
-
-Where needed, and go back to reading a number when a building block “decides” to stop processing the information (e.g. filter can decide not to pass the input if the predicate returns false on the input).
