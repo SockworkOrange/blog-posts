@@ -53,5 +53,5 @@ windowed_for_median = fixed_event_window(folded_sum, 3)
 folded_median = fold_median(windowed_for_median)
 res = stdout_sink(folded_median)
 
-if __name__=="__main__":
+if __name__== "__main__":
     list(res)
