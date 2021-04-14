@@ -94,4 +94,4 @@
   Saving
    (get-payload [this] "generating a db object"))
 
-(println (save (DBObject.)))
+;; (println (save (DBObject.)))
